@@ -692,7 +692,7 @@ p {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .lineacv1 {
@@ -915,7 +915,7 @@ p {
 .footer1 {
     width: 100%;
     background-color: #3f3b3b;
-    height: 120px;
+    height: 150px;
     margin-bottom: 20px;
     color: white;
     opacity: 40%;
@@ -925,12 +925,14 @@ p {
     flex-direction: column;
     justify-content: center;
     text-align: left;
+    margin-left: 20px;
 }
 
 .isifoot h3 {
     font-size: 32px;
     font-family: 'Kanit';
     line-height: 1;
+    margin-top: 20px;
 }
 
 .isifoot p {
@@ -977,7 +979,7 @@ p {
 }
 
 .logososmed1 img {
-    margin-right: 40px;
+    margin-right: 30px;
     height: 25px;
 }
 
