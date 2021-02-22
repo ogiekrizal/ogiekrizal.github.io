@@ -1,0 +1,1433 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    /* overflow-x: hidden; */
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*..............................................*/
+
+body {
+    background-color: #201f1f;
+}
+/*  background-image: url("gmbr/bg.png");*/ 
+.frame1 {
+    top: 0;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 700px;
+    background-color: #222020;
+    background-position: center;
+}
+
+.back img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    opacity: 30%;
+    z-index: 1;
+
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 10;
+    position: fixed;
+    background-color: #222020;
+}
+
+.header2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    width: 100%;
+    padding-top: 10px;
+    z-index: 10;
+
+}
+
+
+.frame1 .header {
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.frame1 .header.muncul {
+    opacity: 1;
+}
+
+
+.logo img {
+    height: 40px;
+    margin-left: 29px;
+}
+
+.menu { 
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    font-family: 'Kanit', sans-serif;
+    margin-right: 35px;
+    z-index: 6;
+    
+}
+
+.menu a {
+    margin-left: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: lighter;
+    opacity: 90%;
+}
+
+.konten1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.gambar{
+    display: flex;
+    width: 50%;
+    margin-left: 40px;
+}
+
+.bulat1 img {
+    position: absolute;
+    z-index: 1;
+    width: 220px;
+    margin-top: 180px;
+    margin-left: 130px;
+    transition: all 1s ease-in-out;
+   
+}
+
+a:hover {
+    color: #ffaf00;
+}
+
+.gambar:hover .bulat1 img {
+    transform: translate(-10px,-10px);
+
+}
+
+.gambar:hover .bulat2 img {
+    transform: translate(5px,5px);
+
+}
+
+
+.bulat2 img {
+    position: absolute;
+    z-index: 2;
+    width: 200px;
+    margin-top: 400px;
+    margin-left: 340px;
+    transition: all 1s ease-in-out;
+}
+
+.foto {
+    transform: translate(0,600px);
+    transition: all 1s ease;
+}
+
+.foto.load2  {
+    transform: translate(0,0px);   
+    z-index: 3; 
+}
+
+.foto img {
+    position: absolute;
+    width: 400px;
+    margin-top: 80px;
+    margin-left: 135px;
+    transition: all 2s 1s ease-in;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    
+}
+
+.mask {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    margin-top: -300px;
+    background: rgb(32,31,31);
+    background: linear-gradient(0deg, rgba(32,31,31,1) 34%, rgba(0,212,255,0) 89%);
+    z-index: 5;
+}
+
+
+.silang1 img {
+    width: 90px;
+    position: absolute;
+    z-index: 6;
+    margin-top: 225px;
+    margin-left: 440px;
+    transition: all 3s  0.5s ease-in-out;
+}
+
+.silang2 {
+    opacity: 0;
+    transform: translate(-100px,0);
+    transition: all 2s ease;
+}
+
+.silang2.load3 {
+    opacity: 1;
+    transform: translate(0,0);
+    z-index: 6;
+}
+
+.silang1 {
+    opacity: 0;
+    transform: translate(100px,0);
+    transition: all 2s ease;
+}
+
+.silang1.load4 {
+    opacity: 1;
+    transform: translate(0,0);
+    z-index: 6;
+}
+
+.bulat1 {
+    opacity: 0;
+    transform: translate(100px,50px);
+    transition: all 2.5s 1.5s ease;
+}
+
+.bulat1.load5 {
+    opacity: 1;
+    transform: translate(0,0);
+    z-index: 2;
+}
+
+.bulat2 {
+    opacity: 0;
+    transform: translate(-50px,100px);
+    transition: all 2.5s 1.5s ease;
+}
+
+.bulat2.load6 {
+    opacity: 1;
+    transform: translate(0,0);
+    z-index: 2;
+}
+
+.gambar:hover .silang1 img {
+    transform: rotate(360deg);
+}
+
+.gambar:hover .silang2 img {
+    transform: rotate(270deg);
+}
+
+
+.silang2 img {
+    position: absolute;
+    z-index: 6;
+    margin-top: 350px;
+    margin-left: 60px;
+    transition: all 2s ease-in-out;
+}
+
+
+
+.hai {
+    width: 50%;
+    margin-top: 200px;
+    z-index: 7;
+    transition: 1.5s  ease;
+    opacity: 0.5;
+    transform: translate(0,1300px);
+
+}
+
+.hai.load1  {
+    transform: translate(0px,0);
+    opacity: 1;
+}
+
+.hai h2 {
+    color: #f02166;
+    font-family: 'Kanit', sans-serif;
+    font-size: 32px;
+    opacity: 70%;
+    font-weight: 400;
+    margin-top: -10px;
+    
+}
+
+.hai h1 {
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    
+    
+}
+
+.hai h3 {
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: lighter;
+}
+
+.resume  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    width: 200px;
+    height: 32px;
+    background-color: #ffaf00;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    margin-top: 40px;
+    font-weight: 400;
+    opacity: 90%;
+    text-decoration: none;
+}
+
+
+
+
+.frame2 {
+    margin-top: 100px;
+    z-index: 10;
+}
+
+.frame21 {
+    margin-top: 100px;
+    width: 100%;
+}
+
+.frame212 {
+    margin-top: 100px;
+    width: 100%;
+}
+
+.frame5 {
+    margin-top: 100px;
+    display: flex;
+    width: 100%;
+}
+
+.line22 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.education {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    transform: translate(0px,-20px);
+    width: 45%;
+}
+
+.education.satu {
+    transform: translate(0,0);
+    opacity: 1;
+}
+
+.frame3 {
+    margin-top: 100px;
+}
+
+.frame31 {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.personalinfo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    color: white;
+}
+
+
+
+.judul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    color: #f02166;
+}
+
+.judul1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+    color: #f02166;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    transform: translate(0px,-20px);
+}
+
+.judul1.satu {
+    transform: translate(0,0);
+    opacity: 1;
+
+}
+
+
+
+.iconjudul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+}
+
+.iconjudul img {
+    height: 46px;
+}
+
+.head h5 {
+    font-size: 62px;
+    font-family: 'Kanit', sans-serif;
+    color:white;
+    opacity: 95%;
+    font-weight: lighter;
+    margin-left: 30px;
+
+}
+
+.sekolah h6 {
+    font-size: 24px;
+}
+
+.isibaru {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 3;
+    opacity: 0;
+    transition: 2s all ease-in;
+
+}
+
+
+
+
+.mask2 {
+    width: 100%;
+    background-color: rgb(34, 32, 32);
+    height: 100px;
+    position: absolute;
+    z-index: 2;
+    opacity: 50%;
+    margin-top: 90px;
+}
+
+.icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.isibaru.satu {
+    opacity: 1;
+}
+
+.icon1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    color: violet;
+}
+
+.icon1 img {
+    width: 40px;
+}
+
+.icon2 {
+    display: flex;
+    height: 53px;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.icon2 p {
+    color: #f02166;
+}
+
+p {
+    font-family: 'Kanit', sans-serif;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: lighter;
+    color: white;
+    margin-top: 5px;
+
+}
+
+.sekolah ul li {
+    font-family: 'Kanit', sans-serif;
+    font-size: 14px;
+    margin-bottom: 2px;
+    font-weight: lighter;
+    list-style-type: circle;
+    margin-left: 20px;
+    color: white;
+    line-height: 1.2;
+}
+
+.sekolah span {
+    display: none;
+}
+
+.icon2 h6 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
+    color: #ffaf00;
+}
+
+
+.isi {
+    display: flex;
+    flex-direction: row;
+}
+
+.tanggal {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: center;
+    text-align: right;
+    width: 30%;
+    padding-right: 20px;
+}
+
+.isiogr {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sekolah {
+    width: 90%;
+    border-left: 1px solid;
+    border-color: #f02166;
+}
+
+.sekolah h6 {
+    display: block;
+    font-family: 'Kanit', sans-serif;
+    font-size: 32px;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    color: #ffaf00;
+}
+
+.exps {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.exp {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    color: white;
+    width: 100%;
+}
+
+
+
+.organisasi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px; 
+    opacity: 0;
+    transition: all 1s ease-in;
+    transform: translate(0px,-20px);
+}
+
+
+.organisasi.satu {
+    transform: translate(0,0);
+    opacity: 1;
+}
+
+
+.skills {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 90%;
+    opacity: 1;
+    transition: all 1s ease-in;
+
+}
+
+.skills.satu {
+    opacity: 1;
+
+}
+
+.cac {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.cac.satu {
+    opacity: 1;
+}
+
+.acv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.linacv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.lineacv1 {
+    width: 45%;
+    margin-left: 80px;
+}
+
+.certif {
+    width: 45%;
+    margin-top: 20px;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    transform: translate(0px,-20px);
+}
+
+.certif.satu {
+    transform: translate(0,0);
+    opacity: 1;
+}
+
+.head2 h5 {
+    font-size: 40px;
+    font-family: 'Kanit', sans-serif;
+    color:white;
+    opacity: 95%;
+    font-weight: lighter;
+    margin-left: 10px;
+
+}
+
+.iconjudul2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+}
+
+.iconjudul2 img {
+    height: 46px;
+}
+
+.office {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 10px;
+    opacity: 0;
+    transition: all 1s ease;
+    
+}
+
+.office {
+    opacity: 1;
+}
+
+.kotak {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    margin-top: 10px;
+    
+}
+
+.judul3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Kanit', sans-serif;
+    font-size: 24px;
+    color: #ffaf00;
+}
+
+.icon3 {
+    width: 50px;
+    height: 50px;
+}
+
+.icon3 img {
+    height: 45px;
+}
+    
+
+.kotak1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90px;
+    margin-left: 20px;
+}
+
+.icon4 {
+    width: 70px;
+    height: 70px;
+}
+
+.kotak1 p {
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    color: white;
+}
+
+.icon4 img {
+    height:70px;
+}
+
+
+.kn { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s all ease;
+}
+
+.kn.satu {
+    opacity: 1;
+}
+
+.port1 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+.gambar11 {
+    width: 442px;
+    height: 632px;
+    background-image: url("gmbr/stunting.png");
+    box-shadow: 0 4px 8px 0 rgba(236, 227, 227, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-size: 442px;
+}
+
+.gambar12 {
+    width: 442px;
+    height: 632px;
+    background-image: url("gmbr/box.png");
+    box-shadow: 0 4px 8px 0 rgba(236, 227, 227, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-size: 442px;
+}
+
+
+.judulak {
+    color: white;
+    font-family: 'Kanit';
+    font-size: 100px;
+    font-weight: bolder;
+    opacity: 50%;
+
+}
+
+.humber {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 28px;
+    height: 20px;
+    margin-right: 20px;
+
+}
+
+.humber span {
+    display: block;
+    height: 3px;
+    width: 28px;
+    background-color: #2C4B95;
+    border-radius: 8px;
+}
+
+.menu.ada {
+    transform: translate(0,0);
+
+}
+
+.logo2 {
+    display: none;
+}
+
+.lingkaran {
+    display: none;
+}
+
+.wa {
+    display: none;
+}
+
+
+.sosmed {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.isisosmed {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 50px;
+}
+
+
+.logososmed img {
+    margin-left: 20px;
+    height: 30px;
+}
+
+.dld {
+    display: inline;
+}
+
+.footer1 {
+    width: 100%;
+    background-color: #3f3b3b;
+    height: 120px;
+    margin-bottom: 20px;
+    color: white;
+    opacity: 40%;
+}
+.isifoot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.isifoot h3 {
+    font-size: 32px;
+    font-family: 'Kanit';
+    line-height: 1;
+}
+
+.isifoot p {
+    font-size: 16px;
+    font-family: 'Roboto';
+    line-height: 1.5;
+}
+
+.isifoot p a {
+    color: white;
+}
+
+.isifoot p a:hover {
+    color:#f02166;
+    font-weight: bolder;
+    opacity: 1;
+}
+
+.sosmedbot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 30px;
+    width: 100%;
+}
+
+.isisosmedbot {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+}
+
+.copy {
+    width: 50%;
+    text-align: right;
+    margin-right: 40px ;
+}
+
+.copy p {
+    font-size: 16px;
+    font-family: 'roboto';
+}
+
+.logososmed1 img {
+    margin-right: 40px;
+    height: 25px;
+}
+
+
+
+
+
+@media screen and (max-width: 576px) {
+.menu {
+    top: 0px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    transform: translate(600px,0px);
+    transition: all 1s ease;
+    background-color:#222020;
+}
+
+.wa a {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 11px;
+    font-style: normal;
+    text-decoration: none;
+    
+}
+
+.waa img {
+    height: 11px;
+    margin-right: 5px;
+}
+
+.wa a:hover {
+    color: #ffaf00;
+}
+
+.wa {
+    display: flex;
+    opacity: 70%;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.logo img {
+    height: 24px;
+    margin-left: 20px;
+}
+
+.logo2 {
+    display: inline;
+}
+
+.logo2 img {
+    height: 30px;
+    margin-bottom: 40px; 
+}
+
+.menu.ada {
+    transform: translate(0,0);
+
+}
+
+.lingkaran {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 68px;
+    height: 68px;
+    border: 2px solid;
+    border-color: white;
+    border-radius: 50px;
+    margin-top: 40px;
+    font-size: 50px;
+    color: white;
+    font-family: 'Kanit';
+    font-weight: lighter;
+}
+
+.menu a {
+    line-height: 3;
+    margin-left: 0px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.humber {
+    display: flex;
+}
+
+.header {
+    display: flex;   
+
+}
+
+.header2 {
+    margin-top: 10px;
+}
+
+.konten1 {
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+
+}
+
+.gambar {
+    width: 80%; 
+    margin-left: 10px;
+}
+
+
+.foto img {
+    margin-top: 100px;
+    margin-left: 0px;
+    width: 320px;
+    z-index: 3;
+    box-shadow: none;
+}
+
+.mask {
+    margin-top: -400px;
+    height: 400px;
+}
+
+.mask2 {
+    display: none;
+}
+
+.hai {
+    margin-top: 400px;
+    width: 80%;
+    margin-left: 30px;
+}
+
+.hai h2 {
+    font-size: 24px;
+    color: #ffaf00;
+}
+
+.hai h1 {
+    font-size: 24px;
+}
+
+.hai h3 {
+    font-size: 12px;
+}
+
+/* download */
+.dld {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+
+.resume a {
+    display: flex;
+    width: 150px;
+    height: 28px;
+    font-size: 12px;
+    margin-top: 0px;
+}
+
+.resume {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.kosong {
+    display: none;
+    
+}
+
+.sosmed {
+    margin-top: 0px;
+    margin-left: 20px;
+}
+
+.isisosmed {
+    margin-right: 0px;
+}
+
+.logososmed img {
+    margin-left: 0px;
+    margin-right: 10px;
+    height: 24px;
+}
+
+
+
+
+.frame2 {
+    margin-top: -100px;
+    z-index: 9;
+}
+
+.frame21 {
+    margin-top: 20px;
+}
+
+
+.frame3 {
+    margin-top: 10px;
+}
+
+
+.isibaru {
+    flex-direction: row;
+    width: 500px;
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+}
+
+.icon {
+    width: 100%;
+}
+
+.icon2 {
+    margin-left: 10px;
+}
+
+.icon2 h6 {
+    font-size: 18px;
+}
+
+.organisasi {
+    margin-top: 60px;
+}
+
+.judul {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.iconjudul {
+    width: 30px;
+    height: 30px;
+}
+
+.iconjudul img {
+    height: 29px;
+}
+
+.iconjudul2 {
+    width: 30px;
+    height: 30px;
+}
+
+.iconjudul2 img {
+    height: 29px;
+}
+
+.head h5 {
+    font-size: 36px;
+}
+
+.head2 h5 {
+    font-size: 36px;
+    margin-left: 30px;
+}
+
+.education {
+    padding: 0px;
+    width: 100%;
+}
+
+.sekolah {
+    width: 100%;
+
+}
+
+.sekolah  h6 {
+    font-size: 16px;
+    width: 100%;
+}
+
+.sekolah p {
+    font-size: 14px;
+}
+
+.sekolah ul li {
+    font-size: 14px;
+}
+
+.certif {
+    border: none;
+    width: 100%;
+}
+
+.icon {
+    width: 100%;
+
+}
+
+.line22 {
+    flex-direction: column;
+}
+
+.exps {
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.exps .tanggal {
+    display: none;
+}
+
+.isiogr {
+    width: 100%;
+    align-items: left;
+    justify-content: left;
+}
+
+.exp {
+    width: 100%;
+}
+
+.exp .tanggal {
+    display: none;
+}
+
+.frame31 {
+    justify-content: left;
+}
+
+
+.skills {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cac {
+    width: 100%;
+}
+
+.icon1 {
+    width: 50px;
+    height: 50px;
+}
+
+.icon1 img {
+    width: 30px;
+}
+
+
+.icon3 {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.icon3 img {
+    height: 32px;
+}
+
+.kotak1 {
+    width: 80px;
+}
+
+.kotak1 p {
+    display: none;
+}
+
+.office {
+    width: 100%;
+    margin-left: 30px;
+}
+
+
+
+.bulat1 img {
+    width: 180px;
+    margin-left: 10px;
+
+
+}
+ .bulat2 img {
+    width: 160px;
+    margin-left: 160px;
+    margin-top: 360px;
+ }
+
+ .silang1 img {
+     margin-left: 240px;
+     width: 50px;
+    
+ }
+
+.silang2 img {
+    width: 150px ;
+    margin-left: 0px;
+    opacity: 80%;
+    margin-top: 340px;
+}
+
+
+.cac {
+    margin-top: 50px;
+}
+
+.sekolah span {
+    display: inline;
+    font-family: 'Kanit';
+    font-size: 14px;
+    font-weight: lighter;
+    color: #f02166;
+    font-style: italic;
+}
+
+.kn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.judulak {
+    font-size: 30px;
+}
+
+.port1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gambar11 {
+    margin-bottom: 30px;
+}
+
+.isifoot h3 {
+    font-size: 24px;
+    font-family: 'Kanit';
+    line-height: 1;
+}
+
+.isifoot p {
+    font-size: 12px;
+    font-family: 'Roboto';
+    line-height: 1.5;
+}
+
+.lineacv1 {
+    width: 45%;
+    margin: 0px;
+}
+
+
+
+
+}
