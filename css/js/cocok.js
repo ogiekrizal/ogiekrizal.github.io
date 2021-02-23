@@ -221,7 +221,7 @@ $(window).scroll(function(){
   
     }
 
-    if (wscroll >= $('.frame212').offset().top-70) {
+    if (wscroll >= $('.frame212').offset().top-150) {
         console.log('oke')
         $(".cac").addClass("satu");
     } else {
